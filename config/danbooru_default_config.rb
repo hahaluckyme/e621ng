@@ -10,18 +10,18 @@ module Danbooru
     # The name of this Danbooru.
     def app_name
       if CurrentUser.safe_mode?
-        "e926"
+        "GenderbendMeSafely"
       else
-        "e621"
+        "GenderbendMe"
       end
     end
 
     def description
-      "Find good furry art, fast"
+      "All things gender bender"
     end
 
     def domain
-      "e621.net"
+      "genderbend.me"
     end
 
     # Force rating:s on this version of the site.
@@ -31,7 +31,8 @@ module Danbooru
 
     # The canonical hostname of the site.
     def hostname
-      Socket.gethostname
+      # Socket.gethostname
+      "genderbend.me"
     end
 
     # The list of all domain names this site is accessible under.
@@ -42,11 +43,11 @@ module Danbooru
 
     # Contact email address of the admin.
     def contact_email
-      "management@#{server_host}"
+      "admin@#{server_host}"
     end
 
     def takedown_email
-      "management@#{server_host}"
+      "admin@#{server_host}"
     end
 
     def takedown_links
@@ -320,7 +321,7 @@ fart'
     end
 
     def beta_notice
-      false
+      true
     end
 
     def discord_site
@@ -399,7 +400,8 @@ fart'
 
     # The name of the server the app is hosted on.
     def server_host
-      Socket.gethostname
+      # Socket.gethostname
+      "genderbend.me"
     end
 
     # Names of all Danbooru servers which serve out of the same common database.
@@ -676,11 +678,11 @@ fart'
           },
       ]
     end
-    
+
     def flag_reason_48hours
       "If you are the artist, and want this image to be taken down [b]permanently[/b], file a \"takedown\":/static/takedown instead.\nTo replace the image with a \"fixed\" version, upload that image first, and then use the \"Duplicate or inferior version\" reason above.\nFor accidentally released paysite or private content, use the \"Paysite, commercial, or private content\" reason above."
     end
-    
+
     def deletion_reasons
       [
         "Inferior version/duplicate of post #%PARENT_ID%",
