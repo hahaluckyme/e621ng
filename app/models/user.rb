@@ -935,6 +935,7 @@ class User < ApplicationRecord
     self.last_ip_addr ||= CurrentUser.ip_addr
     self.enable_keyboard_navigation = true
     self.enable_auto_complete = true
+    self.show_post_statistics = true
 
     return if Rails.env.test?
     Danbooru.config.customize_new_user(self)
