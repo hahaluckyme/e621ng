@@ -735,7 +735,7 @@ fart'
 
     # The number of posts displayed per page.
     def posts_per_page
-      20
+      30
     end
 
     def is_post_restricted?(post)
