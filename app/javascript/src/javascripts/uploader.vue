@@ -85,50 +85,10 @@
                 <div class="flex-grid border-bottom">
                     <div class="col">
                         <label class="section-label" for="post_sex_tags">Characters</label>
-                        <div>
-                            Select (and write in) all that apply. Character sex is based only on what is visible in the
-                            image.
-                        </div>
-                        <div><a href="/wiki_pages/tag_what_you_see">
-                            Outside information or other images should not be used when deciding what tags are used.
-                        </a></div>
                     </div>
                     <div class="col2">
-                        <div class="flex-wrap">
-                            <image-checkbox :check="check" :checks="checkboxes.selected" v-for="check in checkboxes.sex"
-                                            @set="setCheck"
-                                            :key="check.name"></image-checkbox>
-                        </div>
-                        <hr>
-                        <div class="flex-wrap">
-                            <image-checkbox :check="check" :checks="checkboxes.selected"
-                                            v-for="check in checkboxes.count" @set="setCheck"
-                                            :key="check.name"></image-checkbox>
-                        </div>
-                        <hr>
-                        <div class="flex-wrap">
-                            <image-checkbox :check="check" :checks="checkboxes.selected"
-                                            v-for="check in checkboxes.pairing" @set="setCheck"
-                                            :key="check.name"></image-checkbox>
-                        </div>
                         <textarea class="tag-textarea" rows="2" v-model="tagEntries.sex" id="post_sexes"
                                   placeholder="Ex: character_name solo_focus etc."
-                                  data-autocomplete="tag-edit"></textarea>
-                    </div>
-                </div>
-                <div class="flex-grid border-bottom">
-                    <div class="col">
-                        <label class="section-label">Body Types and Species</label>
-                        <div>One listed body type per visible character, listed options are mutually exclusive.</div>
-                    </div>
-                    <div class="col2">
-                        <div class="flex-wrap">
-                            <image-checkbox :check="check" :checks="checkboxes.selected"
-                                            v-for="check in checkboxes.body" @set="setCheck"
-                                            :key="check.name"></image-checkbox>
-                        </div>
-                        <textarea class="tag-textarea" rows="2" v-model="tagEntries.bodyType" id="post_bodyTypes"
-                                  placeholder="Ex: bear dragon hyena rat newt etc."
                                   data-autocomplete="tag-edit"></textarea>
                     </div>
                 </div>
@@ -144,7 +104,7 @@
                     <div class="col2">
           <textarea class="tag-textarea" v-model="tagEntries.theme" id="post_themes" rows="2"
                     data-autocomplete="tag-edit"
-                    placeholder="Ex: cub young gore scat watersports diaper my_little_pony vore not_furry rape hyper etc."></textarea>
+                    placeholder="Ex: young gore scat watersports diaper vore rape hyper etc."></textarea>
                     </div>
                 </div>
             </template>
@@ -179,11 +139,6 @@
                     <div>
                         Separate tags with spaces. (<a href="/help/tags" target="_blank">help</a>)
                     </div>
-                    <div>
-                      <a href="/wiki_pages/tag_what_you_see">
-                        Outside information or other images should not be used when deciding what tags are used.
-                      </a>
-                    </div>
                 </div>
                 <div class="col2">
                   <file-preview classes="box-section in-editor" :preview="filePreview"></file-preview>
@@ -206,7 +161,6 @@
                         <a href="#" @click.prevent="findRelated('artist')">Artists</a> |
                         <a href="#" @click.prevent="findRelated('copyright')">Copyrights</a> |
                         <a href="#" @click.prevent="findRelated('char')">Characters</a> |
-                        <a href="#" @click.prevent="findRelated('species')">Species</a> |
                         <a href="#" @click.prevent="findRelated('meta')">Metatags</a> |
                         <a href="#" @click.prevent="previewFinalTags">Preview Final Tags</a>
                     </div>
@@ -364,7 +318,7 @@
         self.setPreviewVideo(src);
       else if (file.type.match('application/x-shockwave-flash'))
         self.setPreviewImage(thumbs.flash);
-      else 
+      else
         self.setPreviewImage(src);
     };
     reader.readAsDataURL(file);
@@ -490,11 +444,6 @@
         allChecks[check.name.toLowerCase().replace(' ', '_')] = true;
       };
       artist_checks.forEach(addChecks);
-      sex_checks.forEach(addChecks);
-      pairing_checks.forEach(addChecks);
-      char_count_checks.forEach(addChecks);
-      body_type_checks.forEach(addChecks);
-
 
       return {
         safe: window.uploaderSettings.safeSite,
@@ -526,10 +475,6 @@
 
         checkboxes: {
           artist: artist_checks,
-          sex: sex_checks,
-          pairing: pairing_checks,
-          count: char_count_checks,
-          body: body_type_checks,
           selected: {},
           all: allChecks
         },
