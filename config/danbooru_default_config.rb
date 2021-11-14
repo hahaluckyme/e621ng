@@ -462,10 +462,10 @@ fart'
     # The method to use for backing up image files.
     def backup_storage_manager
       # Don't perform any backups.
-      StorageManager::Null.new
+      # StorageManager::Null.new
 
       # Backup files to /mnt/backup on the local filesystem.
-      # StorageManager::Local.new(base_dir: "/mnt/backup", hierarchical: false)
+      StorageManager::Local.new(base_dir: "/home/danbooru/backup", hierarchical: false)
 
       # Backup files to /mnt/backup on a remote system. Configure SSH settings
       # in ~/.ssh_config or in the ssh_options param (ref: http://net-ssh.github.io/net-ssh/Net/SSH.html#method-c-start)
@@ -631,7 +631,7 @@ fart'
 
     # If enabled, users must verify their email addresses.
     def enable_email_verification?
-      false
+      true
     end
 
     def enable_signups?
