@@ -9,12 +9,12 @@
    policy.script_src  :self, 'ads.dragonfru.it', 'js-agent.newrelic.com', 'bam.nr-data.net', 'https://www.google.com/recaptcha/', 'https://www.gstatic.com/recaptcha/', 'https://www.recaptcha.net/', 'https://mc.yandex.ru/', 'https://yastatic.net'
    policy.style_src   :self, :unsafe_inline
    policy.connect_src :self, 'ads.dragonfru.it', 'bam.nr-data.net', 'https://mc.yandex.ru', 'https://yastatic.net'
-   policy.object_src  :self, 'static1.e621.net', 'static1.e926.net'
-   policy.media_src   :self, 'static1.e621.net', 'static1.e926.net'
+   policy.object_src  :self, 'genderbend.me', 'static1.e621.net', 'static1.e926.net'
+   policy.media_src   :self, 'genderbend.me', 'static1.e621.net', 'static1.e926.net'
    policy.frame_ancestors :none
    policy.frame_src   'https://www.google.com/recaptcha/', 'https://www.recaptcha.net/'
    policy.font_src    :self
-   policy.img_src     :self, :data, 'static1.e621.net', 'static1.e926.net', 'ads.dragonfru.it', 'https://mc.yandex.ru', 'https://yastatic.net'
+   policy.img_src     :self, :data, 'genderbend.me', 'static1.e621.net', 'static1.e926.net', 'ads.dragonfru.it', 'https://mc.yandex.ru', 'https://yastatic.net'
    policy.child_src   :none
    policy.form_action :self, 'discord.e621.net', 'discord.com'
 #   # If you are using webpack-dev-server then specify webpack-dev-server host
