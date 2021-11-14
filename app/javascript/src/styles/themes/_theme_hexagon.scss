@@ -2,7 +2,7 @@ $hexagon-color-background:        #230223;
 $hexagon-color-link:              #b4c7d9;
 $hexagon-color-link-hover:        #e9f2fa;
 $hexagon-color-text-muted:        #999999;
-$hexagon-color-section:           #3a2139;
+$hexagon-color-section:           #4A1556;
 $hexagon-color-section-border:    $hexagon-color-background;
 
 $theme_hexagon: (
@@ -11,7 +11,7 @@ $theme_hexagon: (
 
   // Layout Colors
   "color-background":             $hexagon-color-background, // Main background (dark blue, large hexagons)
-  "color-foreground":             #530157,                   // Foreground (lighter blue, small hexagons)
+  "color-foreground":             #5E1F67,                   // Foreground (lighter blue, small hexagons)
   "color-section":                $hexagon-color-section,    // Foreground sections - boxes, sections, etc
 
   "color-section-pending":        $hexagon-color-section,
