@@ -75,3 +75,5 @@ drop table post_version_versions;
 
 alter table post_votes rename column ip_addr to user_ip_addr;
 
+alter table posts add column tag_count_change int not null default 0;
+update posts set tag_count = tag_count_general + tag_count_artist + tag_count_character + tag_count_copyright + tag_count_change;

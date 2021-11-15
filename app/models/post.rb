@@ -703,7 +703,7 @@ class Post < ApplicationRecord
 
   module TagMethods
     def ad_tag_string
-      "#{tag_string_artist} #{tag_string_species} #{tag_string_character}"[0..1024]
+      "#{tag_string_artist} #{tag_string_change} #{tag_string_character}"[0..1024]
     end
 
     def should_process_tags?

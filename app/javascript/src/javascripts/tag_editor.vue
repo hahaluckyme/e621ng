@@ -13,7 +13,7 @@
             <a href="#" @click.prevent="findRelated('artist')">Artists</a> |
             <a href="#" @click.prevent="findRelated('copyright')">Copyrights</a> |
             <a href="#" @click.prevent="findRelated('char')">Characters</a> |
-            <a href="#" @click.prevent="findRelated('species')">Species</a> |
+            <a href="#" @click.prevent="findRelated('change')">Change</a> |
             <a href="#" @click.prevent="findRelated('meta')">Metatags</a> |
             <a href="#" @click.prevent="previewFinalTags">Preview Final Tags</a>
         </div>

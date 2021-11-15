@@ -108,7 +108,7 @@
     jQuery("#stats-pct-artisttags").html(pct(stats.tags.artist, stats.tags.total));
     jQuery("#stats-pct-charactertags").html(pct(stats.tags.character, stats.tags.total));
     jQuery("#stats-pct-copyrighttags").html(pct(stats.tags.copyright, stats.tags.total));
-    jQuery("#stats-pct-speciestags").html(pct(stats.tags.species, stats.tags.total));
+    jQuery("#stats-pct-changetags").html(pct(stats.tags.change, stats.tags.total));
     jQuery("#stats-pct-metatags").html(pct(stats.tags.meta, stats.tags.total));
     jQuery("#stats-pct-invalidtags").html(pct(stats.tags.invalid, stats.tags.total));
   });
@@ -164,7 +164,7 @@
       artist:      <%= @stats['artist_tags'] %>,
       character:   <%= @stats['character_tags'] %>,
       copyright:   <%= @stats['copyright_tags'] %>,
-      species:     <%= @stats['species_tags'] %>,
+      change:      <%= @stats['change_tags'] %>,
       meta:        <%= @stats['meta_tags'] %>,
       invalid:     <%= @stats['invalid_tags'] %>
     }
@@ -427,8 +427,8 @@
         <td><%= del(@stats['copyright_tags']) %></td><td class='stats-pct' id='stats-pct-copyrighttags'></td>
       </tr>
       <tr>
-        <td>Species tag count</td>
-        <td><%= del(@stats['species_tags']) %></td><td class='stats-pct' id='stats-pct-speciestags'></td>
+        <td>change tag count</td>
+        <td><%= del(@stats['change_tags']) %></td><td class='stats-pct' id='stats-pct-changetags'></td>
       </tr>
       <tr>
         <td>Meta tag count</td>

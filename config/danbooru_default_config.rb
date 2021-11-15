@@ -496,14 +496,14 @@ fart'
             "hover" => "$link_hover_color"
           }
         },
-        "species" => {
+        "change" => {
           "category" => 5,
           "short" => "spec",
           "extra" => [],
-          "header" => 'Species',
+          "header" => 'Change',
           "humanized" => nil,
           "mod_only" => false,
-          "relatedbutton" => "Species",
+          "relatedbutton" => "Change",
           "css" => {
             "color" => "#0F0",
             "hover" => "#070"
@@ -614,17 +614,17 @@ fart'
 
     #Sets the order of the split tag header list (presenters/tag_set_presenter.rb)
     def split_tag_header_list
-      @split_tag_header_list ||= ["invalid","artist","copyright","character","species","general","meta","lore"]
+      @split_tag_header_list ||= ["invalid","artist","copyright","character","change","general","meta","lore"]
     end
 
     #Sets the order of the categorized tag string (presenters/post_presenter.rb)
     def categorized_tag_list
-      @categorized_tag_list ||= ["invalid","artist","copyright","character","species","meta","general","lore"]
+      @categorized_tag_list ||= ["invalid","artist","copyright","character","change","meta","general","lore"]
     end
 
     #Sets the order of the related tag buttons (javascripts/related_tag.js)
     def related_tag_button_list
-      @related_tag_button_list ||= ["general","artist","species","character","copyright"]
+      @related_tag_button_list ||= ["general","artist","change","character","copyright"]
     end
 
 #END TAG
