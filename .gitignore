@@ -28,6 +28,7 @@ script/scratch.*
 test/fixtures/vcr_cassettes
 .gitconfig
 test/reports
+.vs
 
 .idea
 .vagrant
