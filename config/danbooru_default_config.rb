@@ -321,7 +321,7 @@ fart'
     end
 
     def beta_notice
-      true
+      false
     end
 
     def discord_site
@@ -735,7 +735,7 @@ fart'
 
     # The number of posts displayed per page.
     def posts_per_page
-      30
+      72
     end
 
     def is_post_restricted?(post)

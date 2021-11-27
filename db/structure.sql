@@ -2637,7 +2637,7 @@ scat
 furry -rating:s'::text,
     time_zone character varying DEFAULT 'Eastern Time (US & Canada)'::character varying NOT NULL,
     bcrypt_password_hash text,
-    per_page integer DEFAULT 20 NOT NULL,
+    per_page integer DEFAULT 36 NOT NULL,
     custom_style text,
     bit_prefs bigint DEFAULT 0 NOT NULL,
     last_ip_addr inet,
