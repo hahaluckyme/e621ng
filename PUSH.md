@@ -17,5 +17,6 @@ now=$(date +"%Y-%m-%d")
 ```sh
 pg_restore -c -d danbooru2 danbooru2_2021-11-26.tar
 bin/rails r Post.import!
+# todo: unpack data folder tar.gz
 ```
 

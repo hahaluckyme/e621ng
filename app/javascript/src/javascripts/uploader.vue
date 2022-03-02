@@ -786,7 +786,7 @@
         }).length;
       },
       notEnoughTags: function () {
-        return this.tagCount < 4;
+        return false;
       },
       invalidRating: function () {
         return !this.rating;
