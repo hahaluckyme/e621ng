@@ -261,7 +261,7 @@ fart'
 
     # Flat limit that applies to all users, regardless of level
     def hourly_upload_limit
-      30
+      100
     end
 
     def replace_post_limit
